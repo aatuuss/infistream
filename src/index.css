@@ -1,3 +1,13 @@
 @import "tailwindcss";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+/* Hide scrollbar but still scrollable */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* for IE and Edge */
+  scrollbar-width: none;     /* for Firefox */
+}
