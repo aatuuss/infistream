@@ -1,138 +1,55 @@
 "use client"
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
   const [animateTitle, setAnimateTitle] = useState(false);
   const [animateButtons, setAnimateButtons] = useState(false);
   const [animateProjectList, setAnimateProjectList] = useState(false);
-  const [animateBottomSection, setAnimateBottomSection] = useState(false); // State for bottom section
-  const [animateInfoSection, setAnimateInfoSection] = useState(false); // New state for Info section
-  const [animateImage, setAnimateImage] = useState(false); // New state for image animation
+  const [animateBottomSection, setAnimateBottomSection] = useState(false);
+  const [animateInfoSection, setAnimateInfoSection] = useState(false);
+  const [animateImage, setAnimateImage] = useState(false);
 
   const titleRef = useRef(null);
   const buttonsRef = useRef(null);
   const projectListRef = useRef(null);
-  const bottomSectionRef = useRef(null); // Ref for bottom section
-  const infoSectionRef = useRef(null); // New ref for Info section
-  const imageRef = useRef(null); // New ref for image
+  const bottomSectionRef = useRef(null);
+  const infoSectionRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
-    const titleObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateTitle(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
+    const observers = [];
 
-    const buttonsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateButtons(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.2,
-      }
-    );
+    const createObserver = (ref, setter, threshold = 0.5) => {
+      if (!ref.current) return;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            setter(entry.isIntersecting);
+          });
+        },
+        { threshold }
+      );
+      observer.observe(ref.current);
+      observers.push(observer);
+    };
 
-    const projectListObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateProjectList(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
+    createObserver(titleRef, setAnimateTitle, 0.5);
+    createObserver(buttonsRef, setAnimateButtons, 0.2);
+    createObserver(projectListRef, setAnimateProjectList, 0.5);
+    createObserver(bottomSectionRef, setAnimateBottomSection, 0.3);
+    createObserver(infoSectionRef, setAnimateInfoSection, 0.5);
+    createObserver(imageRef, setAnimateImage, 0.5);
 
-    const bottomSectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateBottomSection(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.3, // Trigger when 30% of the section is visible
-      }
-    );
-
-    const infoSectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateInfoSection(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.5, // Trigger when 50% of the info section is visible
-      }
-    );
-
-    const imageObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setAnimateImage(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.5, // Trigger when 50% of the image is visible
-      }
-    );
-
-    if (titleRef.current) {
-      titleObserver.observe(titleRef.current);
-    }
-    if (buttonsRef.current) {
-      buttonsObserver.observe(buttonsRef.current);
-    }
-    if (projectListRef.current) {
-      projectListObserver.observe(projectListRef.current);
-    }
-    if (bottomSectionRef.current) {
-      bottomSectionObserver.observe(bottomSectionRef.current);
-    }
-    if (infoSectionRef.current) {
-      infoSectionObserver.observe(infoSectionRef.current);
-    }
-    if (imageRef.current) {
-      imageObserver.observe(imageRef.current);
-    }
-
-    // Clean up the observers when the component unmounts
     return () => {
-      if (titleRef.current) {
-        titleObserver.unobserve(titleRef.current);
-      }
-      if (buttonsRef.current) {
-        buttonsObserver.unobserve(buttonsRef.current);
-      }
-      if (projectListRef.current) {
-        projectListObserver.unobserve(projectListRef.current);
-      }
-      if (bottomSectionRef.current) {
-        bottomSectionObserver.unobserve(bottomSectionRef.current);
-      }
-      if (infoSectionRef.current) {
-        infoSectionObserver.unobserve(infoSectionRef.current);
-      }
-      if (imageRef.current) {
-        imageObserver.unobserve(imageRef.current);
-      }
+      observers.forEach((observer) => observer.disconnect());
     };
   }, []);
 
   return (
     <div
-      className="min-h-screen mt-10"
-      style={{
-        background: "linear-gradient(to bottom, #BBE2FB 0%, #FFFFFF 100%)",
-        overflowX: "hidden",
-      }}
+      className="min-h-screen mt-16 overflow-x-hidden 
+                 bg-gradient-to-b from-[#1E90FF] via-[#a7daf5] to-white"
     >
       {/* Header */}
       <div className="relative px-8 py-16">
@@ -141,28 +58,38 @@ export default function Home() {
           <div className="text-center mb-16">
             <h1
               ref={titleRef}
-              className={`text-6xl md:text-7xl font-extrabold font-[Poppins] text-transparent bg-clip-text bg-[#61A7FF] tracking-wider transition-all duration-1000 ease-out ${
-                animateTitle ? "scale-105 opacity-100" : "scale-95 opacity-0"
+              className={`text-6xl md:text-7xl font-extrabold text-transparent 
+              bg-clip-text bg-gradient-to-r from-white to-[#4facfe] 
+              tracking-wider transition-all duration-1000 ease-out ${
+                animateTitle
+                  ? "scale-110 opacity-100 drop-shadow-[0_0_25px_rgba(97,167,255,0.8)]"
+                  : "scale-95 opacity-0"
               }`}
               style={{
-                textShadow: "0 0 15px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6)",
+                fontFamily: "'Orbitron', sans-serif",
+                letterSpacing: "0.1em",
               }}
             >
-              INFIMECH
+              INFISTREAM
             </h1>
 
             <h2
-              className={`text-3xl md:text-4xl font-[Poppins] font-light tracking-widest mt-2 transition-all duration-1000 ease-out delay-300 ${
-                animateTitle ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              className={`text-xl md:text-2xl tracking-[0.3em] mt-4 
+              transition-all duration-1000 ease-out delay-300 ${
+                animateTitle
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
               }`}
               style={{
-                color: '#FFFFFF',
-                textShadow: '0 0 8px rgba(107,114,128,0.3)',
+                fontFamily: "'Raleway', sans-serif",
+                color: "#FFFFFF",
+                textShadow: "0 0 10px rgba(97,167,255,0.5)",
               }}
             >
               TECHNOLOGY
             </h2>
           </div>
+
 
           {/* Main Content */}
           <div className="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
@@ -238,51 +165,53 @@ export default function Home() {
             </svg>
 
             {/* Mobil */}
-            <div className="relative w-[26rem] lg:w-[32rem] h-auto">
-              <img src="img/f1.png" alt="F1 CFD Visualization" className="w-full h-auto object-contain relative z-10" />
-
-              {/* Speed streak */}
-              <div className="absolute bottom-1/2 right-0 w-64 h-32 pointer-events-none z-0">
-                {[...Array(35)].map((_, i) => {
-                  const width = 30 + Math.random() * 80;
-                  const top = Math.random() * 100;
-                  const delay = Math.random() * 0.5;
-                  return (
-                    <div
-                      key={i}
-                      style={{
-                        top: `${top}%`,
-                        width: `${width}px`,
-                        height: '1px',
-                        left: '0',
-                        position: 'absolute',
-                        backgroundColor: '#FFD700',
-                        boxShadow: '0 0 10px rgba(255,215,0,0.9)',
-                        animation: `streakFlash 1s ease-in-out ${delay}s infinite`,
-                      }}
-                    ></div>
-                  );
-                })}
-              </div>
-
+<div className="relative w-[26rem] lg:w-[32rem] h-auto max-w-full">
+  <img
+    src="img/f1.png"
+    alt="F1 CFD Visualization"
+    className="w-full max-w-full h-auto object-contain relative z-10"
+  />
+  {/* Speed streak */}
+  <div className="absolute bottom-1/2 right-0 w-64 h-32 pointer-events-none z-0">
+    {[...Array(35)].map((_, i) => {
+      const width = 30 + Math.random() * 80;
+      const top = Math.random() * 100;
+      const delay = Math.random() * 0.5;
+      return (
+        <div
+          key={i}
+          style={{
+            top: `${top}%`,
+            width: `${width}px`,
+            height: "1px",
+            left: "0",
+            position: "absolute",
+            backgroundColor: "#FFD700",
+            boxShadow: "0 0 10px rgba(255,215,0,0.9)",
+            animation: `streakFlash 1s ease-in-out ${delay}s infinite`,
+          }}
+        ></div>
+      );
+    })}
+  </div>
               <style jsx>{`
                 @keyframes streakFlash {
                   0% { opacity: 0; transform: translateX(0px) translateY(0px) scaleX(0.3); }
-                  40% { opacity: 1; transform: translateX(70px) translateY(-9px) scaleX(1); }
-                  100% { opacity: 0; transform: translateX(400px) translateY(-20px) scaleX(0.5); }
+                  40% { opacity: 1; transform: translateX(100px) translateY(10px) scaleX(1); }
+                  100% { opacity: 0; transform: translateX(300px) translateY(-20px) scaleX(0.5); }
                 }
               `}</style>
             </div>
 
             {/* Navigation Buttons */}
-            <div ref={buttonsRef} className="grid grid-cols-2 gap-4 w-99 relative">
+            <div ref={buttonsRef} className="grid grid-cols-2 gap-4 w-99 r#C0E4FBelative">
               {["OPENFOAM","SUMBER LITERASI","KONSULTASI","","MATERI SIMULASI","PORTOFOLIO"].map((btn, idx) => (
                 btn ? (
                   <button
                     key={idx}
-                    className={`px-8 py-2 rounded-md bg-[#61A7FF] text-white font-bold transition duration-200 hover:bg-[#d5edfc] hover:text-black border-2 border-transparent hover:border-[#61A7FF] text-sm ${
-                      animateButtons ? '' : 'opacity-0 translate-y-5'
-                    }`}
+                    className={`px-8 py-2 rounded-md bg-[#C0E4FB] text-[#1E90FF] font-bold font-sans transition duration-200 
+    hover:bg-transparent hover:text-white border-2 border-transparent hover:border-[#61A7FF] text-sm 
+    ${animateButtons ? '' : 'opacity-0 translate-y-5'}`}
                     style={{
                       animation: animateButtons ? `buttonEntry 0.5s ease-out ${idx * 0.1}s forwards` : 'none'
                     }}
@@ -317,7 +246,7 @@ export default function Home() {
         <div className="lg:col-span-2">
           <div className="relative mb-4">
             <h2
-              className={`text-3xl font-bold text-black ${
+              className={`text-3xl font-bold font-sans text-black ${
                 animateInfoSection ? "animate-textSlideInUp" : "opacity-0"
               }`}
             >
@@ -331,7 +260,7 @@ export default function Home() {
             ></div>
           </div>
           <p
-            className={`text-black leading-relaxed text-base ${
+            className={`text-black leading-relaxed font-sans text-base ${
               animateInfoSection ? "animate-textSlideInUp" : "opacity-0"
             }`}
             style={{ animationDelay: "0.4s" }}
@@ -345,16 +274,17 @@ export default function Home() {
         </div>
 
         {/* IMAGE */}
-        <div className="flex justify-center lg:justify-end">
-          <img
-            ref={imageRef}
-            src="img/infistream.png"
-            alt="Racing Vehicle"
-            className={`w-full max-w-[200px] h-auto object-contain hover:scale-110 transition-transform duration-700 ${
-              animateImage ? "animate-imageBounceIn" : "opacity-0"
-            }`}
-          />
-        </div>
+<div className="flex justify-center lg:justify-end">
+  <img
+    ref={imageRef}
+    src="img/infistream.png"
+    alt="Racing Vehicle"
+    className={`w-full max-w-[200px] h-auto object-contain hover:scale-110 transition-transform duration-700 ${
+      animateImage ? "animate-imageBounceIn" : "opacity-0"
+    }`}
+  />
+</div>
+
       </div>
     </div>
 
@@ -365,7 +295,7 @@ export default function Home() {
         href="https://infistream.id/wp-content/uploads/2024/07/Infimech-2024-Google-Spreadsheet.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className={`text-blue-500 font-bold text-2xl inline-block ${
+        className={`text-blue-500 font-bold font-sans text-2xl inline-block ${
           animateProjectList ? "" : "opacity-0 translate-y-5"
         } transition-all duration-500 hover:scale-110 hover:text-blue-600`}
         style={{
