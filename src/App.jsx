@@ -8,12 +8,14 @@ import Layanan from './app/Layanan'
 import Page from './components/Page'
 import Portofolio from './components/Portofolio'
 import Portofolio1 from './app/Portofolio1'
+import Formula from './components/Formula'
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Home/>
+    <Formula/>
+    {/* <Home/> */}
     <Simulasi />
     <KonsultasiCFD/>
     <Layanan/>
