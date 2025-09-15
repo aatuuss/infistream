@@ -1,132 +1,98 @@
-import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa'; // Import ikon yang dibutuhkan
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    // Handle newsletter subscription logic here
-    console.log('Subscribing email:', email);
-    setEmail('');
-    alert('Thank you for subscribing to our newsletter!');
+    console.log("Subscribing email:", email);
+    setEmail("");
+    alert("Terima kasih! Anda telah berlangganan newsletter kami.");
   };
 
   return (
-    <footer className="bg-blue-500  text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              {/* Logo - Menggunakan tag <img> */}
-              <img
-                src="img/logo.png" // Ganti dengan path ke gambar logo Anda
-                alt="Company Logo"
-                className="h-20 w-auto mr-3" // Sesuaikan ukuran logo sesuai kebutuhan
-              />
+    <footer className="relative border-t bg-blue-600 text-slate-100">
+      <div className="pointer-events-none absolute inset-x-0 -top-20 flex justify-center">
+        <div className="h-40 w-[90%] max-w-6xl bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-indigo-500/20 blur-3xl" />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-5 pb-6 pt-16 lg:px-8 lg:pt-20">
+        
+
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
+  <img 
+    src="img/logo.png" 
+    alt="Logo" 
+    className="h-10 w-10 object-contain" 
+  />
+  <div>
+    <p className="text-lg font-bold tracking-tight">Infistream</p>
+    <p className="-mt-1 text-xs uppercase tracking-[0.2em] text-blue-200">Harmoni Teknologi</p>
+  </div>
+</div>
+
             </div>
-            <p className="text-sm leading-relaxed opacity-90">
-              A CFD literacy platform offering insights from industry and academic, backed by expert experience since 2018
-            </p>
+            {/* <p className="mt-4 max-w-sm text-sm text-slate-300">
+              Solusi komprehensif untuk simulasi CFD, pelatihan, dan konsultasi rekayasa. Kami membantu mempercepat inovasi produk Anda.
+            </p> */}
+            <div className="mt-6 flex items-start gap-3 text-sm text-slate-300">
+              <MapPin className="mt-0.5 h-4 w-4 flex-none text-blue-300" />
+              <p>
+                Jl. Mayang 08, Bunulrejo, Blimbing<br />
+                Kota Malang, Jawa Timur, Indonesia 65123
+              </p>
+            </div>
           </div>
 
-          {/* Service Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Service</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                  About
-                </a>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-100">Kontak</h4>
+            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-blue-300" />
+                <a href="https://wa.me/6281333546332" className="hover:text-white">+62 813-3354-6332</a>
               </li>
-              <li>
-                <a href="#" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                  Portfolio
-                </a>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-blue-300" />
+                <a href="mailto:hello@infimech.id" className="hover:text-white">hello@infimech.id</a>
               </li>
             </ul>
           </div>
 
-          {/* Company Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                  CFD Simulation Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                  CFD Training Services
-                </a>
-              </li>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-100">Layanan</h4>
+            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              <li>CFD Simulation Services</li>
+              <li>CFD Training Services</li>
             </ul>
           </div>
 
-          {/* Newsletter Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Join a Newsletter</h3>
-            <form onSubmit={handleSubscribe} className="space-y-3">
-              <div>
-                <label htmlFor="email" className="block text-sm mb-2">
-                  Your Email
-                </label>
+          <div className="lg:pl-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-100">Berlangganan</h4>
+            <p className="mt-4 text-sm text-slate-300">Masukkan email Anda untuk mendapatkan kabar terbaru dari kami.</p>
+            <form onSubmit={handleSubscribe} className="mt-4">
+              <label htmlFor="footer-email" className="sr-only">Email</label>
+              <div className="flex rounded-lg ring-1 ring-white/10 focus-within:ring-white/30">
                 <input
+                  id="footer-email"
                   type="email"
-                  id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter Your Email"
-                  className="w-full px-3 py-2 rounded text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  placeholder="Email Anda"
+                  className="w-full rounded-l-lg bg-white/5 px-3 py-2 text-sm text-white placeholder:text-slate-400 focus:outline-none"
                   required
                 />
+                <button type="submit" className="rounded-r-lg bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-50">Subscribe</button>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded transition-colors duration-200 font-medium"
-              >
-                Subscribe
-              </button>
             </form>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-blue-300 border-opacity-30">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-sm opacity-90">
-              Copyright © 2025 PT Infimech Harmoni Teknologi
-            </div>
-
-            {/* Contact Information */}
-            <div className="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-8 text-sm">
-              <div className="flex items-start md:items-center space-x-2"> {/* Mengubah items-center menjadi items-start untuk alamat */}
-                <FaMapMarkerAlt className="text-lg" />
-                <div>
-                  <span className="font-semibold block">MALANG OFFICE</span>
-                  <span className="opacity-90">
-                    Jl. Mayjen 08, Bunulrejo, Blimbing Kota Malang, Jawa Timur Indonesia, 65123
-                  </span>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4 mt-2 md:mt-0"> {/* Menambahkan margin top untuk mobile */}
-                <a href="mailto:info@infimech.tech" className="flex items-center space-x-2 opacity-90 hover:opacity-100 transition-opacity">
-                  <FaEnvelope className="text-lg" />
-                  <span>info@infimech.tech</span>
-                </a>
-                <a href="tel:+6281315346332" className="flex items-center space-x-2 opacity-90 hover:opacity-100 transition-opacity">
-                  <FaPhone className="text-lg" />
-                  <span>+6281315346332</span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white md:mt-16">
+          <p>Copyright © 2025 PT Infimech Harmoni Teknologi</p>
         </div>
       </div>
     </footer>
