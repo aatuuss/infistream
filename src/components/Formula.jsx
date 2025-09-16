@@ -1,4 +1,5 @@
 import React from "react";
+import { FileText } from "lucide-react";
 
 export default function Formula() {
   return (
@@ -20,10 +21,16 @@ export default function Formula() {
             terhadap penggunaan CFD baik dari praktek, numerik maupun fisika.
           </p>
           <div className="flex items-center gap-4 pt-2">
-            <button className="rounded-md bg-transparent px-6 py-3 font-semibold text-white ring-1 ring-white/60 transition hover:bg-white/10">
-              Explore
-            </button>
-          </div>
+      <a
+        href="https://infistream.id/wp-content/uploads/2024/07/Infimech-2024-Google-Spreadsheet.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-6 py-3 font-semibold text-white shadow-lg ring-1 ring-white/40 transition-all hover:bg-white/20 hover:scale-105 hover:shadow-xl"
+      >
+        <FileText className="h-5 w-5 text-white" />
+        <span>Project List (PDF)</span>
+      </a>
+    </div>
         </div>
 
         {/* Right visual composition */}
