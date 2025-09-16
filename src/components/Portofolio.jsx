@@ -60,10 +60,8 @@ export default function Portofolio() {
   </div>
 
     {/* Video / Gambar */}
-    <div className="relative w-full h-[420px] sm:h-[480px] md:h-[520px] bg-[url('img/portofolio2.jpg')] bg-cover bg-center">
-      
+   <div className="relative w-full h-[420px] sm:h-[480px] md:h-[520px] bg-[url('/img/portofolio2.jpg')] bg-cover bg-center">    
     </div>
-
     {/* Footer */}
     <div className="border-t border-white/10 bg-slate-900/60 px-4 py-3">
       <div className="rounded-lg bg-white/10 px-3 py-2 text-xs text-white/90">Chat</div>
