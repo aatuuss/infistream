@@ -1,7 +1,7 @@
 export default function Portofolio() {
   return (
-    <section className="mx-auto max-w-full px-0 py-0">
-      <div className="relative overflow-hidden rounded-none bg-gradient-to-b from-[#a7daf5] via-[#ffffff] to-white p-6 sm:p-10 min-h-screen">
+    <section className="mx-auto max-w-full px-0 py-0 relative -mt-30">
+      <div className="relative overflow-hidden rounded-none bg-gradient-to-b from-[#1E90FF] via-[#ffffff] to-white p-6 sm:p-10 min-h-screen">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <div className="inline-flex items-center rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold text-slate-700 ring-1 ring-inset ring-white/60">
@@ -26,7 +26,7 @@ export default function Portofolio() {
           </div>
 
           <div className="relative mx-auto w-full">
-            <div className="pointer-events-none absolute -left-24 -top-16 h-72 w-72 rounded-full bg-[#a7daf5] blur-3xl" />
+            
             <div className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-violet-300/30 blur-3xl" />
 
             <div className="relative flex items-end justify-center gap-6 md:justify-end">
@@ -60,10 +60,8 @@ export default function Portofolio() {
   </div>
 
     {/* Video / Gambar */}
-    <div className="relative w-full h-[420px] sm:h-[480px] md:h-[520px] bg-[url('img/portofolio2.jpg')] bg-cover bg-center">
-      
+   <div className="relative w-full h-[420px] sm:h-[480px] md:h-[520px] bg-[url('/img/portofolio2.jpg')] bg-cover bg-center">    
     </div>
-
     {/* Footer */}
     <div className="border-t border-white/10 bg-slate-900/60 px-4 py-3">
       <div className="rounded-lg bg-white/10 px-3 py-2 text-xs text-white/90">Chat</div>
