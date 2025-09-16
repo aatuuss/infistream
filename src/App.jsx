@@ -16,7 +16,11 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Home/>
+    <Formula/>
+    {/* <Home/> */}
+    <Simulasi />
+    <KonsultasiCFD/>
+    <Layanan/>
     {/* <Page/> */}
     <Simulasi1 />
     <KonsultasiCFD />
