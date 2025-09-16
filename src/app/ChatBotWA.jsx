@@ -12,7 +12,7 @@ const ChatBotWA = () => {
 
     setMessages([...messages, { sender: "user", text: input }]);
 
-    const phoneNumber = "6281333546332"; 
+    const phoneNumber = "6282334497604"; 
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       input
     )}`;
