@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ChatBotWA = () => {
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Halo! 👋 Ada yang bisa kami bantu?" },
+    { sender: "bot", text: "Hai! 👋 Ada yang bisa kami bantu?" },
   ]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
