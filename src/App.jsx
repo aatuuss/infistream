@@ -6,9 +6,12 @@ import Navbar from './components/Navbar'
 import KonsultasiCFD from './app/KonsultasiCFD'
 import Layanan from './app/Layanan'
 import Page from './components/Page'
+import Simulasi from './app/Simulasi'
+import KonsultasiCFDF from './app/KonsultasiCFD'
+import Layanan from './app/Layanan'
 import Portofolio from './components/Portofolio'
 import Portofolio1 from './app/Portofolio1'
-import Formula from './components/Formula'
+
 
 function App() {
   return (
@@ -20,9 +23,10 @@ function App() {
     <KonsultasiCFD/>
     <Layanan/>
     {/* <Page/> */}
+    <Simulasi1 />
+    <KonsultasiCFD />
+    <Layanan />
     <Portofolio/>
-    <Portofolio1/>
-    <Footer/>
     </>
   )
 }
