@@ -7,6 +7,7 @@ import KonsultasiCFD from './app/KonsultasiCFD'
 import Simulasi1 from './app/Simulasi1'
 import Portofolio from './components/Portofolio'
 import Layanan from './app/Layanan'
+import ChatBotWA from './app/ChatBotWA'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <Layanan />
     <Portofolio/>
     <Portofolio1/>
+    <ChatBotWA />
     <Footer/>
     </>
   )
