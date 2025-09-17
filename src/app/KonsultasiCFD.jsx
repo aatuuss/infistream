@@ -67,7 +67,7 @@ const KonsultasiCFD = () => {
         position: "absolute",
         left: "50%",
         transform: "translateX(-50%)",
-        zIndex: 10,
+        zIndex: 0,
       });
 
       gsap.timeline({
@@ -102,7 +102,7 @@ const KonsultasiCFD = () => {
       {/* Judul + Gambar Tengah */}
       <div className="grid align-items-center justify-items-center">
         <h1
-          className="col-start-1 row-start-1 z-10 text-center text-5xl md:text-7xl font-extrabold text-transparent 
+          className="col-start-1 row-start-1 z-0 text-center text-5xl md:text-7xl font-extrabold text-transparent 
                      bg-clip-text bg-gradient-to-t from-white to-[#4facfe] 
                      tracking-wider drop-shadow-[0_0_25px_rgba(97,167,255,0.8)] scroll-animated-h1"
           style={{
@@ -116,12 +116,12 @@ const KonsultasiCFD = () => {
         <img
           src="/img/konsultasi.png"
           alt="Simulasi CFD"
-          className="col-start-1 row-start-1 z-20 w-full max-w-lg mx-auto scroll-animated-img"
+          className="col-start-1 row-start-1 z-0 w-full max-w-lg mx-auto scroll-animated-img"
         />
       </div>
 
       {/* Teks + Button sejajar */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4 my-12 relative z-20 scroll-animated-text mt-6 mb-12">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 my-12 relative z-0 scroll-animated-text mt-6 mb-12">
         <p className="font-bold text-4xl md:text-2xl text-white drop-shadow-lg">
           <span>Jasa</span>
           <span> simulasi</span>
@@ -138,7 +138,7 @@ const KonsultasiCFD = () => {
       </div>
 
       {/* Cards */}
-      <div className="cards-container relative w-full h-96 flex justify-center items-center z-10 mt-16">
+      <div className="cards-container relative w-full h-96 flex justify-center items-center z-0 mt-16">
         {/* Card kiri */}
         <div className="card-animation-item card-left w-72 h-40 drop-shadow-2xl">
           <div className="relative z-10 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-4 flex items-center justify-between">
@@ -163,7 +163,7 @@ const KonsultasiCFD = () => {
 
         {/* Card tengah */}
         <div className="card-animation-item card-center w-72 h-40 drop-shadow-2xl">
-          <div className="relative z-10 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-4 flex items-center justify-between">
+          <div className="relative z-0 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-4 flex items-center justify-between">
             <div className="text-white text-xl font-bold text-center drop-shadow-lg">
               <p>INDUSTRI</p>
               <p>DIRGANTARA</p>
