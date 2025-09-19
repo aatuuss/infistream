@@ -16,7 +16,6 @@ export default function WhatsAppBot() {
   const quickReplies = useMemo(
     () => [
       { label: "Konsultasi CFD", text: "Halo, saya ingin konsultasi terkait CFD." },
-    //   { label: "Pelatihan CFD", text: "Halo, saya tertarik mengikuti pelatihan CFD." },
       { label: "Penawaran", text: "Bisakah kirimkan penawaran untuk layanan CFD?" },
       { label: "Jadwalkan", text: "Saya ingin menjadwalkan meeting/Zoom untuk diskusi." },
     ],
