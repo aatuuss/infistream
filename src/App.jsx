@@ -8,6 +8,8 @@ import Simulasi1 from './app/Simulasi1'
 import Portofolio from './components/Portofolio'
 import Layanan from './app/Layanan'
 import ChatBotWA from './app/ChatBotWA'
+import Botchat from './components/Botchat'
+import ChatSelector from './components/ChatSelector'
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
     <Layanan />
     <Portofolio/>
     <Portofolio1/>
-    <ChatBotWA />
+    <ChatSelector/>
     <Footer/>
     </>
   )

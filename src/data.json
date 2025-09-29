@@ -1,0 +1,316 @@
+{
+  "Beranda": {
+    "label": "Infistream",
+    "text": "Apa itu Infistream?",
+    "reply": "Infistream merupakan media literasi CFD (Computational Fluid Dynamics), yang menyajikan informasi seputar CFD bagi industri dan akademik berdasarkan pengalaman pakar CFD sejak tahun 2019.",
+    "materi": [
+      {
+        "label": "Teori Numerik",
+        "text": "Saya ingin tahu materi tentang Teori Numerik CFD.",
+        "reply": "Berikut materi Teori Numerik dari Infistream CFD:",
+        "children": [
+          {
+            "label": "Metode Numerik",
+            "text": "Apa itu Metode Numerik dalam CFD?",
+            "reply": "Metode Numerik adalah teknik untuk menyelesaikan masalah matematis yang kompleks dalam simulasi CFD dengan mendiskritisasi persamaan menjadi bentuk yang bisa dihitung secara numerik. Di Infistream, materi ini membahas metode seperti finite volume, elemen hingga, dan iterasi numerik."
+          },
+          {
+            "label": "Catatan CFD",
+            "text": "Apa isi Catatan CFD?",
+            "reply": "Catatan CFD di Infistream mencakup berbagai teori dasar, termasuk definisi simulasi CFD, penggunaan model fisika, pengaruh mesh, validasi hasil simulasi, dan studi kasus sederhana."
+          }
+        ]
+      },
+      {
+        "label": "Teori Fisika",
+        "text": "Saya ingin tahu materi tentang Teori Fisika CFD.",
+        "reply": "Berikut materi Teori Fisika dari Infistream CFD:",
+        "children": [
+          {
+            "label": "Mekanika Fluida",
+            "text": "Apa itu Mekanika Fluida?",
+            "reply": "Mekanika fluida adalah cabang ilmu yang mempelajari perilaku fluida baik dalam keadaan diam maupun bergerak, termasuk konsep seperti statika fluida, dinamika fluida, distribusi tekanan, viskositas, dan gaya yang bekerja pada fluida."
+          },
+          {
+            "label": "Fenomena Transport",
+            "text": "Apa itu Fenomena Transport dalam CFD?",
+            "reply": "Fenomena transport meliputi perpindahan massa, momentum, dan energi dalam fluida. Materi ini menjelaskan bagaimana konveksi, difusi, perpindahan panas, dan interaksi antar variabel mempengaruhi hasil simulasi CFD."
+          }
+        ]
+      },
+      {
+        "label": "OpenFOAM / Open Source",
+        "text": "Saya ingin tahu materi OpenFOAM CFD.",
+        "reply": "Berikut materi OpenFOAM / Open Source dari Infistream CFD:",
+        "children": [
+          {
+            "label": "Apa itu OpenFOAM",
+            "text": "Penjelasan apa itu OpenFOAM?",
+            "reply": "OpenFOAM adalah perangkat lunak open-source populer untuk simulasi CFD yang menyediakan alat untuk memodelkan berbagai fenomena fisika, termasuk turbulensi, perpindahan panas, dan kondisi batas pada geometri kompleks."
+          },
+          {
+            "label": "Tahap-Tahap Simulasi CFD",
+            "text": "Tahapan simulasi CFD menggunakan OpenFOAM?",
+            "reply": "Tahapan simulasi CFD meliputi persiapan geometri dan mesh, penentuan kondisi batas dan kondisi awal, pemilihan solver, simulasi iteratif, hingga post-processing dan verifikasi hasil simulasi."
+          }
+        ]
+      },
+      {
+        "label": "OpenSource",
+        "text": "Apa itu OpenSource",
+        "reply": "Open Source adalah kode sumber bebas yang dapat dimodifikasi, didistribusikan, dan digunakan tanpa hambatan lisensi, mendukung kolaborasi terbuka untuk kebutuhan akademik maupun industri. Nuryanto, 2022 (Gramedia)."
+      }
+    ]
+  },
+
+  "Sumber_Literasi": [
+    {
+      "label": "Literasi CFD",
+      "text": "Apa yang itu literasi CFD",
+      "reply": "Literasi CFD meliputi point data dibawah ini:",
+      "children": [
+        {
+          "label": "Teori Mekanika Fluida",
+          "text": "Apa yang dimaksud Teori Mekanika Fluida",
+          "reply": "Mekanika fluida mempelajari perilaku cairan dan gas, termasuk aliran, turbulensi, viskositas, serta interaksinya dengan lingkungan untuk mendukung perancangan sistem yang efisien. Bidang ini memiliki aplikasi luas di industri, energi, teknologi, dan lingkungan, sehingga berperan penting dalam inovasi dan pemecahan masalah nyata."
+        },
+        {
+          "label": "Metode Numerik",
+          "text": "Apa itu Metode Numerik",
+          "reply": "Metode numerik adalah pendekatan untuk menyelesaikan persamaan matematika kompleks secara pendekatan angka (approximation) menggunakan operasi dasar, berbeda dengan metode analitik yang menghasilkan solusi exact. Metode ini berperan penting dalam memecahkan perhitungan matematis rumit dengan bantuan komputer, termasuk persamaan linier, non-linier, diferensiasi, integrasi, interpolasi, regresi, hingga persamaan diferensial."
+        },
+        {
+          "label": "Catatan CFD",
+          "text": "Apa isi Catatan CFD?",
+          "reply": "Catatan CFD ini ditujukan bagi pengguna atau calon pengguna CFD untuk memahami dasar fisika, metode numerik, pemodelan turbulensi, serta alur kerja standar menggunakan OpenFOAM. Isinya mencakup konsep utama seperti mesh, dinamika fluida, metode volume hingga, solver, boundary condition, hingga contoh kasus praktis."
+        },
+        {
+          "label": "Pengertian simulasi CFD",
+          "text": "Jelaskan Pengertian CFD",
+          "reply": "Simulasi CFD memodelkan aliran fluida dengan persamaan Navier-Stokes, meshing, solver, dan visualisasi hasil, sehingga banyak dipakai di bidang teknik untuk prediksi tanpa eksperimen mahal."
+        },
+        {
+          "label": "Fenomena Transport",
+          "text": "Apa itu Fenomena Transport",
+          "reply": "Fenomena transportasi mempelajari transfer momentum, panas, dan massa secara terpadu dengan dasar prinsip konservasi, berkembang pesat dalam berbagai aplikasi modern, serta terus diperbarui untuk mendukung pemahaman fundamental dan teknologi baru."
+        },
+        {
+          "label": "HPC For CFD",
+          "text": "Apa itu HPC For CFD",
+          "reply": "HPC untuk CFD membutuhkan konfigurasi compiler dan MPI yang tepat agar OpenFOAM terkompilasi dengan benar dan perhitungan paralel berjalan optimal."
+        },
+        {
+          "label": "Mekanika Kuantum",
+          "text": "Apa itu Mekanika Kuantum",
+          "reply": "Mekanika kuantum mendasari berbagai inovasi teknik, mulai dari transistor, material canggih, kriptografi kuantum, hingga komputer kuantum yang jauh lebih efisien dari teknologi klasik."
+        }
+      ]
+    }
+  ],
+
+  "OpenFoam": [
+    {
+      "label": "OpenFOAM",
+      "text": "Apa saja Materi dari OpenFoam",
+      "reply": "Beikut materi dari OpenFoam",
+      "children": [
+        {
+          "label": "Macam macam OpenFoam",
+          "text": "Apa saja macam macam OpenFoam",
+          "reply": "OpenFoam dibagi menjadi dua yaitu Using OpenFOAM (For User) dan Programming with OpenFOAM (For Programmer)",
+          "children": [
+            {
+              "label": "Computational Fluid Dynamics in OpenFOAM",
+              "text": "Apa itu Computational Fluid Dynamics in OpenFOAM?",
+              "reply": "OpenFOAM adalah perangkat lunak CFD open-source berbasis metode volume hingga yang memungkinkan simulasi aliran fluida kompleks secara fleksibel dan efisien untuk penelitian maupun pengembangan."
+            },
+            {
+              "label": "Definisi Geometri, Pembentukan Jala, dan Konversi Jala",
+              "text": "Apa itu Definisi Geometri, Pembentukan Jala, dan Konversi Jala",
+              "reply": "Dalam CFD, geometri merepresentasikan wilayah aliran tiga dimensi, sementara jala adalah diskritisasi ruang (volume atau permukaan) yang penting untuk simulasi, sehingga bab ini membahas pembuatan, konversi, dan manipulasi jala."
+            },
+            {
+              "label": "OpenFOAM Case Setup",
+              "text": "Apa itu OpenFOAM Case Setup",
+              "reply": "OpenFOAM adalah perangkat lunak CFD yang memerlukan pengaturan awal $p$, $U$, dan batas, dengan contoh kasus tersedia di TUTORIALS."
+            },
+            {
+              "label": "Post-Processing, Visualization, and Data Sampling",
+              "text": "Apa pengertian dari Post-Processing, Visualization, and Data Sampling",
+              "reply": "Post-processing adalah tahap setelah simulasi untuk mengolah data, visualization menyajikannya secara visual, dan data sampling mengambil sebagian data untuk analisis detail."
+            },
+            {
+              "label": "OpenFOAM Design and Overview",
+              "text": "Apa itu OpenFOAM Design and Overview",
+              "reply": "OpenFOAM menggunakan C++ untuk mengelola konsep kompleks CFD dengan abstraksi tinggi, sehingga memudahkan pemrograman sekaligus tetap efisien dan portabel."
+            },
+            {
+              "label": "Pemrograman Produktif dengan OpenFOAM",
+              "text": "Apa yang dimaksud Pemrograman Produktif dengan OpenFOAM",
+              "reply": "OpenFOAM perlu organisasi yang baik, efisiensi komputasi, dan praktik tepat agar produktif serta mudah dijalankan di cluster HPC."
+            },
+            {
+              "label": "Turbulence Modelling",
+              "text": "Apa itu Turbulence Modelling",
+              "reply": "Turbulence modelling digunakan untuk menghitung tegangan Reynolds, dengan pendekatan paling dasar yaitu model RANS."
+            },
+            {
+              "label": "Aplikasi Pra dan Pasca Pemrosesan",
+              "text": "Apa itu Aplikasi Pra dan Pasca Pemrosesan",
+              "reply": "Aplikasi pra-pemrosesan dipakai untuk menyiapkan data sebelum simulasi, sedangkan pasca-pemrosesan untuk mengolah hasil setelah simulasi."
+            },
+            {
+              "label": "Kustomisasi Pemecah",
+              "text": "Apa itu Kustomisasi Pemecah",
+              "reply": "Kustomisasi pemecah CFD adalah penyesuaian solver agar simulasi sesuai kebutuhan spesifik pengguna."
+            },
+            {
+              "label": "Kondisi batas",
+              "text": "Apa itu Kondisi Batas",
+              "reply": "Dalam FVM, tiap sel menghasilkan persamaan aljabar. Kondisi batas diterapkan lewat patch yang menentukan nilai di batas (boundaryField) dan di dalam volume (internalField)."
+            },
+            {
+              "label": "Model Transportasi",
+              "text": "Apa itu Model Transportasi",
+              "reply": "Model Transportasi di OpenFOAM adalah pustaka yang mengatur sifat transportasi fluida, terutama viskositas."
+            },
+            {
+              "label": "Objek Fungsi",
+              "text": "Apa itu Objek Fungsi",
+              "reply": "Objek fungsi di OpenFOAM adalah kode mandiri yang ditambahkan saat runtime untuk melakukan pasca-pemrosesan atau manipulasi data tanpa mengubah solver, sehingga mudah digunakan kembali dan dibagikan."
+            },
+            {
+              "label": "Penanganan Mesh Dinamis",
+              "text": "Apa itu Penanganan Mesh Dinamis",
+              "reply": "Penanganan mesh dinamis adalah cara OpenFOAM mengatur pergerakan atau perubahan bentuk/topologi mesh agar simulasi tetap stabil dan akurat saat ada objek bergerak atau kondisi aliran berubah."
+            }
+          ]
+        },
+        {
+          "label": "OpenFOAM",
+          "text": "Apa itu OpenFoam",
+          "reply": "OpenFOAM adalah software CFD open-source berbasis C++ untuk menyelesaikan masalah mekanika kontinum dengan solver numerik serta utilitas pre- dan post-processing."
+        },
+        {
+          "label": "Cara Install OpenFoam",
+          "text": "Bagaimana cara insall OpenFoam",
+          "reply": "Penggunaan Windows dengan WSL (Windows Sub System Linux) Penggunaan Mac OS (Product Apple) Penggunaan Linux – Ubuntu"
+        },
+        {
+          "label": "Pre-processing",
+          "text": "Apa itu Pre-Processing",
+          "reply": "Sebelum masuk ke detail bab pre-processing ini, beberapa konsep harus ditempatkan dalam konteksnya",
+          "children": [
+            {
+              "label": "Geometri",
+              "text": "Apa definisi Geometri",
+              "reply": "Geometry adalah cabang matematika tentang bentuk, ukuran, dan posisi yang dalam CFD berfungsi sebagai domain sekaligus batas aliran fluida."
+            },
+            {
+              "label": "Mesh",
+              "text": "Apa itu Mesh",
+              "reply": "Mesh atau grid merupakan tahap pre processing pada CFD yang sangat penting, proses mesh dapat mempengaruhi error tidaknya model simulasi CFD yang digunakan dan kualitas data yang didapatkan"
+            }
+          ]
+        },
+        {
+          "label": "Processing",
+          "text": "Apa itu Processing",
+          "reply": "Processing meliputi materi materi sebagai berikut:",
+          "children": [
+            {
+              "label": "OpenFOAM Case Setup",
+              "text": "Apa itu OpenFOAM Case Setup",
+              "reply": "OpenFOAM case setup adalah proses menyiapkan simulasi CFD, mulai dari geometri, kondisi batas/awal, model, hingga solver."
+            },
+            {
+              "label": "Code programming",
+              "text": "Apa itu Code programming",
+              "reply": "Code programming adalah praktik pengembangan kode dalam OpenFOAM yang menekankan organisasi, efisiensi komputasi, serta penggunaan alat dan HPC agar simulasi berjalan optimal."
+            },
+            {
+              "label": "Solver",
+              "text": "Apa itu Kustomisasi solver",
+              "reply": "Kustomisasi Solver adalah proses menyesuaikan solver di OpenFOAM agar sesuai dengan kebutuhan simulas"
+            },
+            {
+              "label": "Kondisi batas",
+              "text": "Apa itu Kondisi Batas",
+              "reply": "Dalam FVM, tiap sel menghasilkan persamaan aljabar. Kondisi batas diterapkan lewat patch yang menentukan nilai di batas (boundaryField) dan di dalam volume (internalField)."
+            },
+            {
+              "label": "Model Transportasi",
+              "text": "Apa itu Model Transportasi",
+              "reply": "Model Transportasi di OpenFOAM adalah pustaka yang mengatur sifat transportasi fluida, terutama viskositas."
+            },
+            {
+              "label": "Objek Fungsi",
+              "text": "Apa itu Objek Fungsi",
+              "reply": "Objek fungsi di OpenFOAM adalah kode mandiri yang ditambahkan saat runtime untuk melakukan pasca-pemrosesan atau manipulasi data tanpa mengubah solver, sehingga mudah digunakan kembali dan dibagikan."
+            }
+          ]
+        },
+        {
+          "label": "Post-Processing, Visualization, dan Data Sampling",
+          "text": "Apa itu Post-Processing, Visualization, dan Data Sampling",
+          "reply": "Post-Processing, Visualization, dan Data Sampling adalah proses mengolah, menampilkan, dan mengambil sebagian data hasil simulasi CFD agar mudah dipahami."
+        }
+      ]
+    }
+  ],
+
+  "Project_list": [
+    {
+      "label": "Project List",
+      "text": "Apa saja Project list infimech",
+      "reply": "Project List kami sebagai berikut:",
+      "children": [
+        {
+          "label": "Simulasi Kebisingan pada Desain Kapal",
+          "text": "Apa itu proyek Simulasi Kebisingan pada Desain Kapal?",
+          "reply": "CFD menganalisis aliran, turbulensi, dan sebaran suara kapal untuk identifikasi area bising serta perencanaan peredam dan isolasi. Klien: PT. PAL – PPNS (Surabaya)."
+        },
+        {
+          "label": "Simulasi Homogenisasi Mixer",
+          "text": "Apa itu proyek Simulasi Homogenisasi Mixer?",
+          "reply": "CFD pada mixing chamber memodelkan aliran, turbulensi, dan interaksi fluida untuk menilai efisiensi pencampuran, menemukan zona stagnan, serta mengoptimalkan desain mixer agar campuran lebih homogen. Klien: PT. KRAFT Indonesia."
+        },
+        {
+          "text": "Apa itu proyek Simulasi Aerodinamika Pesawat F-16?",
+          "label": "Simulasi Aerodinamika Pesawat F-16",
+          "reply": "CFD pada F-16 menganalisis Cl dan Cd untuk memodelkan aliran udara, distribusi tekanan, serta gaya angkat dan hambatan. Hasilnya membantu optimasi desain, efisiensi, stabilitas, dan manuver pesawat. Klien: Angkatan Udara Republik Indonesia."
+        },
+        {
+          "label": "Simulasi Performa Bangunan",
+          "text": "Apa itu proyek Simulasi Performa Bangunan?",
+          "reply": "CFD pada bangunan dan HVAC mengevaluasi aliran udara, suhu, dan kualitas udara untuk mengidentifikasi sirkulasi buruk, suhu tidak merata, serta potensi polutan. Hasilnya mengoptimalkan desain HVAC untuk kenyamanan, efisiensi energi, dan lingkungan sehat. Klien: PT. Simtex Mechatroinc Indotama."
+        }
+      ]
+    }
+  ],
+
+  "Konsultasi": [
+    {
+      "label": "Penawaran Konsultasi by Email",
+      "text": "Apa penawaran by email?",
+      "reply": "Hubungi alamat email berikut: info@infimech.tech",
+      "children": [
+        {
+          "label": "Konsultasi Offline​",
+          "text": "Apa itu konsultasi offline",
+          "reply": "Kami melayani konsultasi secara offline dengan user, baik di dalam ruangan maupun di luar ruangan, sesuai keadaan user"
+        },
+        {
+          "label": "Konsultasi Online​",
+          "text": "Apa itu konsultasi online",
+          "reply": "Untuk memudahkan user dalam berdiskusi terkait permasalahan pada desainnya, kami menawarkan jasa konsultasi online yang mudah dan fleksibel tanpa harus terbatas dengan jarak dan waktu"
+        },
+        {
+          "label": "Site Visit​",
+          "text": "Apa itu site visit",
+          "reply": "Tim Infimech siap mengunjungi lokasi lapangan operasional. Apabila diperlukan pertemuan langsung antara user dan tim Infimech di lapangan untuk mempermudah analisis produk"
+        }
+      ]
+    }
+  ]
+}
