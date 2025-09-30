@@ -10,7 +10,7 @@ export default function ChatSelector() {
   const isChatOpen = openBot || openWA;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-6 z-50 flex flex-col items-end gap-3">
       {openBot && (
         <div className="relative">
           <Botchat embedded open={openBot} onClose={() => setOpenBot(false)} />
@@ -40,17 +40,22 @@ export default function ChatSelector() {
       {!isChatOpen && (
         <div className="relative">
           <button
-            onClick={() => setExpand((v) => !v)}
-            className="h-16 w-16 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-white shadow-xl shadow-fuchsia-300/30 hover:shadow-fuchsia-400/40 hover:scale-110 active:scale-95 transition grid place-items-center text-2xl"
-            aria-label="Buka menu chat"
-          >
-            {expand ? "−" : "+"}
-          </button>
+  onClick={() => setExpand((v) => !v)}
+  className="h-16 w-16 rounded-2x text-white shadow-fuchsia-300/30 hover:shadow-fuchsia-400/40 hover:scale-110 active:scale-95 transition grid place-items-center"
+  aria-label="Buka menu chat"
+>
+  <img
+    src="/img/bot.png"
+    alt="Bot"
+    className="h-20 w-20 object-contain"
+  />
+</button>
+
 
           {expand && (
             <div className="absolute bottom-20 right-0 flex flex-col gap-3">
               <div className="flex items-center justify-end gap-2">
-                <span className="text-xs rounded-full bg-fuchsia-100 text-fuchsia-700 px-2 py-1">Botchat</span>
+                <span className="text-xs rounded-full bg-fuchsia-100 text-fuchsia-700 px-2 py-1">IMXBot</span>
                 <button
                   onClick={() => {
                     setOpenBot(true);
@@ -63,7 +68,7 @@ export default function ChatSelector() {
                 </button>
               </div>
               <div className="flex items-center justify-end gap-2">
-                <span className="text-xs rounded-full bg-emerald-100 text-emerald-700 px-2 py-1">WhatsApp</span>
+                <span className="text-xs rounded-full bg-emerald-100 text-emerald-700 px-2 py-1">Textme</span>
                 <button
                   onClick={() => {
                     setOpenWA(true);

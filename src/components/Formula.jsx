@@ -28,9 +28,9 @@ export default function Formula() {
       <div className="absolute inset-x-0 bottom-0 h-16 bg-white" />
 
       <div className="relative z-10 grid items-center gap-12 py-20 md:py-24 lg:grid-cols-2 container mx-auto px-6 lg:px-12">
-        {/* Left content */}
+        {/* === Left content === */}
         <div className="space-y-6">
-          <h1 className="animate-on-scroll opacity-0 text-2xl font-extrabold font-sans leading-tight sm:text-5xl tracking-tight">
+          <h1 className="animate-on-scroll opacity-0 text-3xl font-extrabold font-sans leading-tight sm:text-5xl tracking-tight">
             <span className="block">THIS IS</span>
             <span className="block">INFISTREAM</span>
           </h1>
@@ -56,82 +56,152 @@ export default function Formula() {
           </div>
         </div>
 
-        {/* Right visual composition */}
+        {/* === Right visual composition === */}
         <div className="relative mx-auto w-full max-w-xl flex justify-center">
-          {/* === Efek belakang mobil (SELALU AKTIF) === */}
-          <div className="pointer-events-none absolute left-[200px] top-60 z-0 h-60 w-[600px] overflow-hidden">
-            {/* Grid */}
-            <div
-              className="absolute inset-0 rotate-[-40deg] opacity-60"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(34,211,238,0.35) 1px, transparent 1px)",
-                backgroundSize: "40px 40px",
-                maskImage:
-                  "linear-gradient(to top, transparent 0%, white 30%, white 100%)",
-                WebkitMaskImage:
-                  "linear-gradient(to top, transparent 0%, white 30%, white 100%)",
-              }}
-            />
+         {/* Efek belakang mobil */}
+<div
+  className="
+    pointer-events-none absolute z-0 overflow-hidden
+    left-1/1 top-10 w-[360px] h-64   /* 🔥 mobile: mundur (lebih naik) */
+    sm:top-30 sm:w-[480px] sm:h-72   /* tablet */
+    md:left-[200px] md:top-53 md:w-[640px] md:h-85  /* desktop */
+    -translate-x-1/2 md:translate-x-0
+    scale-95 sm:scale-100
+  "
+>
+  {/* Grid */}
+  <div
+    className="absolute inset-0 rotate-[-40deg] opacity-60"
+    style={{
+      backgroundImage:
+        "linear-gradient(to right, rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(34,211,238,0.35) 1px, transparent 1px)",
+      backgroundSize: "40px 40px",
+      maskImage:
+        "linear-gradient(to top, transparent 0%, white 30%, white 100%)",
+      WebkitMaskImage:
+        "linear-gradient(to top, transparent 0%, white 30%, white 100%)",
+    }}
+  />
 
-            {/* Streaks berjalan terus */}
-            <div className="absolute left-0 right-0 top-6 h-1.5 rotate-[-12deg] bg-gradient-to-r from-cyan-300 via-cyan-200/70 to-transparent animate-[move_3s_linear_infinite]" />
-            <div
-              className="absolute left-0 right-0 top-16 h-1.5 rotate-[-12deg] bg-gradient-to-r from-cyan-400 via-cyan-200/70 to-transparent animate-[move_3s_linear_infinite]"
-              style={{ animationDelay: "0.6s" }}
-            />
-            <div
-              className="absolute left-0 right-0 top-28 h-2 rotate-[-12deg] bg-gradient-to-r from-cyan-200 via-cyan-100/70 to-transparent animate-[move_3s_linear_infinite]"
-              style={{ animationDelay: "1.2s" }}
-            />
-          </div>
+  {/* Streaks */}
+  <div className="absolute left-0 right-0 top-2 sm:top-8 md:top-12 h-2 rotate-[-12deg] bg-gradient-to-r from-cyan-300 via-cyan-200/70 to-transparent animate-[move_3s_linear_infinite]" />
+  <div
+    className="absolute left-0 right-0 top-10 sm:top-20 md:top-28 h-2 rotate-[-12deg] bg-gradient-to-r from-cyan-400 via-cyan-200/70 to-transparent animate-[move_3s_linear_infinite]"
+    style={{ animationDelay: "0.6s" }}
+  />
+  <div
+    className="absolute left-0 right-0 top-20 sm:top-32 md:top-44 h-2 rotate-[-12deg] bg-gradient-to-r from-cyan-200 via-cyan-100/70 to-transparent animate-[move_3s_linear_infinite]"
+    style={{ animationDelay: "1.2s" }}
+  />
+</div>
 
-          {/* Mobil (animasi scroll masuk) */}
-          <div className="animate-on-scroll opacity-0 delay-3 relative z-10">
+
+
+
+          {/* Mobil + Bayangan */}
+          <div className="animate-on-scroll opacity-0 delay-3 relative z-10 flex justify-center">
+           {/* Mobil Image */}
+<img
+  src="/img/f2.png"
+  alt="F1"
+  className="
+    relative z-10
+    w-[390px] h-[210px]
+    sm:w-[380px] sm:h-[280px]
+    md:w-[600px] md:h-[400px]
+    translate-y-20      /* 🔥 mobile lebih turun */
+    sm:translate-y-20   /* tablet tetap */
+    md:translate-y-48   /* desktop tetap */
+    object-contain
+  "
+  loading="lazy"
+/>
+
+
             {/* Bayangan elips */}
-            <div className="absolute bottom-4 w-[100%] h-8 bg-black/40 blur-2xl rounded-full" />
-
-            <img
-              src="img/f2.png"
-              alt="F1"
-              className="relative z-10 w-[400px] h-[400px] md:w-[600px] md:h-[400px] translate-y-10 md:translate-y-48 object-contain"
-              loading="lazy"
+            <div
+              className="
+                absolute
+                bottom-6 sm:bottom-8 md:bottom-10
+                left-1/2 -translate-x-1/2
+                w-[70%] h-2
+                sm:w-[65%] sm:h-2
+                md:w-[60%] md:h-2
+                bg-black/35 blur-xl rounded-full
+              "
             />
           </div>
         </div>
       </div>
 
-      {/* Animations */}
-      <style>{`
-        @keyframes fade-up {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
+<style>{`
+  /* --- Base (Mobile) --- */
+  @keyframes fade-zoom-up-mobile {
+    from { opacity: 0; transform: translateY(10px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
-        @keyframes zoom-in {
-          from { opacity: 0; transform: scale(0.85); }
-          to { opacity: 1; transform: scale(1); }
-        }
+  /* --- Tablet --- */
+  @keyframes fade-zoom-up-tablet {
+    from { opacity: 0; transform: translateY(25px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
-        @keyframes slide-in-right {
-          from { opacity: 0; transform: translateX(60px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
+  /* --- Desktop --- */
+  @keyframes fade-zoom-up-desktop {
+    from { opacity: 0; transform: translateY(40px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
-        .animate-on-scroll { transition: all 0.5s ease; }
-        .animate-on-scroll.animate-visible { opacity: 1 !important; }
+  .animate-on-scroll { transition: all 0.5s ease; }
+  .animate-on-scroll.animate-visible { opacity: 1 !important; }
 
-        h1.animate-visible { animation: fade-up 0.8s ease-out forwards; }
-        p.animate-visible { animation: fade-up 0.9s ease-out forwards; }
-        .delay-1.animate-visible { animation-delay: 0.3s; }
-        .delay-2.animate-visible { animation: zoom-in 0.9s ease-out forwards; animation-delay: 0.6s; }
-        .delay-3.animate-visible { animation: slide-in-right 1s ease-out forwards; animation-delay: 0.8s; }
+  h1.animate-visible { animation: fade-up 0.6s ease-out forwards; }
+  p.animate-visible { animation: fade-up 0.7s ease-out forwards; }
+  .delay-1.animate-visible { animation-delay: 0.2s; }
+  .delay-2.animate-visible { animation: zoom-in 0.7s ease-out forwards; animation-delay: 0.4s; }
 
-        @keyframes move {
-          from { transform: translateX(-100%); }
-          to { transform: translateX(100%); }
-        }
-      `}</style>
+  /* Default = mobile */
+  .delay-3.animate-visible {
+    animation: fade-zoom-up-mobile 0.9s ease-out forwards;
+    animation-delay: 0.6s;
+  }
+
+  /* Tablet override */
+  @media (min-width: 640px) {
+    .delay-3.animate-visible {
+      animation: fade-zoom-up-tablet 0.9s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+  }
+
+  /* Desktop override */
+  @media (min-width: 1024px) {
+    .delay-3.animate-visible {
+      animation: fade-zoom-up-desktop 0.9s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes zoom-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes move {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+`}</style>
+
     </section>
   );
 }
