@@ -7,8 +7,6 @@ import KonsultasiCFD from './app/KonsultasiCFD'
 import Simulasi1 from './app/Simulasi1'
 import Portofolio from './components/Portofolio'
 import Layanan from './app/Layanan'
-import ChatBotWA from './app/ChatBotWA'
-import Botchat from './components/Botchat'
 import ChatSelector from './components/ChatSelector'
 
 
