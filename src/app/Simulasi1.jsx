@@ -178,7 +178,7 @@ if (cardsWrapperRef.current) {
 
   return (
     <div ref={componentRef} className="relative pt-0 pb-8 overflow-hidden font-sans">
-      {/* Background */}
+      {/* Back */}
       <img src="/img/line.png" alt="Background garis" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
 
       {/* Judul */}

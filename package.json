@@ -11,12 +11,17 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "flowbite": "^3.1.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.541.0",
     "motion-dom": "^12.23.12",
     "motion-utils": "^12.23.6",
+    "node-fetch": "^3.3.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
@@ -34,5 +39,18 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "vite": "^7.1.2"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aatuuss/infistream.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aatuuss/infistream/issues"
+  },
+  "homepage": "https://github.com/aatuuss/infistream#readme"
 }

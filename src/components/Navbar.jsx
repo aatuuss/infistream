@@ -6,64 +6,27 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          backgroundColor: "#1E90FF",
-          // borderBottom: "1px solid #ccc",
-          zIndex: 50,
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1280px",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "16px",
-          }}
-        >
+      <nav className="fixed top-0 left-0 w-full bg-[#1E90FF] z-50 flex justify-center ">
+        <div className="max-w-7xl w-full flex items-center justify-between px-4 py-3 md:px-8">
           {/* Logo */}
-          <a href="/" style={{ display: "flex", alignItems: "center" }}>
+          <a href="/" className="flex items-center">
             <img
               src="img/logo.png"
               alt="Infimechn Logo"
-              style={{ height: "56px", width: "auto" }}
+              className="h-12 w-auto md:h-14"
             />
           </a>
 
           {/* Bagian kanan */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className="flex items-center gap-3">
             {/* Tombol pencarian */}
             <button
               onClick={() => setIsModalOpen(true)}
               type="button"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "220px",
-                padding: "8px 12px",
-                fontSize: "14px",
-                color: "#555",
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                backgroundColor: "#fff",
-                cursor: "pointer",
-              }}
+              className="flex items-center w-40 sm:w-56 md:w-64 lg:w-72 px-3 py-2 text-sm text-gray-600 border border-gray-300 rounded-lg bg-white hover:bg-gray-100 transition"
             >
               <svg
-                style={{
-                  width: "16px",
-                  height: "16px",
-                  color: "#666",
-                  marginRight: "8px",
-                }}
+                className="w-4 h-4 text-gray-500 mr-2"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -77,7 +40,8 @@ const Navbar = () => {
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
-              Search...
+              <span className="hidden sm:inline">Search...</span>
+              <span className="sm:hidden">Search</span>
             </button>
           </div>
         </div>
