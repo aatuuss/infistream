@@ -16,26 +16,31 @@ const Simulasi1 = () => {
       img: "/img/meeting.png",
       title: "Offline Kelas Simulasi CFD",
       desc: `Kelas belajar Simulasi CFD offline disediakan bagi user yang membutuhkan pembelajaran tatap muka.`,
+      link: "https://infistream.id/training-cfd/",
     },
     {
       img: "/img/numerik.jpg",
       title: "Numerik CFD",
       desc: "Penjelasan terkait matematika lanjut pada bidang engineering dengan konsep matematika dasar.",
+      link: "https://infistream.id/teori-metode-numerik/",
     },
     {
       img: "/img/fisika.jpg",
       title: "Fisika Fluida",
       desc: "Konsep teoritis fenomena fluida: aliran panas, aliran fluida, hingga reaksi kimia.",
+      link: "https://infistream.id/mekanika-fluida/",
     },
     {
       img: "/img/opensource.jpeg",
       title: "Open Source CFD",
       desc: "Perangkat lunak bebas dengan kode sumber terbuka untuk diubah dan dibagikan.",
+      link: "https://infistream.id/catatan-cfd/",
     },
     {
       img: "/img/openfoam.png",
       title: "OpenFOAM CFD",
       desc: "Framework open source untuk solver FVM pada kasus mekanik fluida dan perpindahan panas.",
+      link: "https://infistream.id/openfoam/",
     },
   ];
 
@@ -224,27 +229,27 @@ if (cardsWrapperRef.current) {
       {card.desc}
     </p>
     <a
-      href="#"
-      className="inline-flex items-center justify-between px-2.5 py-1 text-xs md:text-sm font-medium text-[#61A7FF] bg-transparent rounded-full hover:bg-blue-900/30 transition"
+  href={card.link} // 🔗 ambil link dari data
+  className="inline-flex items-center justify-between px-2.5 py-1 text-xs md:text-sm font-medium text-[#61A7FF] bg-transparent rounded-full hover:bg-blue-900/30 transition"
+>
+  Read More
+  <span className="ml-2 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-[#61A7FF] text-white rounded-full">
+    <svg
+      className="w-3 h-3 md:w-3.5 md:h-3.5"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 10"
     >
-      Read More
-      <span className="ml-2 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-[#61A7FF] text-white rounded-full">
-        <svg
-          className="w-3 h-3 md:w-3.5 md:h-3.5"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"
-          />
-        </svg>
-      </span>
-    </a>
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M1 5h12m0 0L9 1m4 4L9 9"
+      />
+    </svg>
+  </span>
+</a>
   </div>
 </div>
               );
