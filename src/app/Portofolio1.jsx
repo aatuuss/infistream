@@ -187,7 +187,7 @@ mm.add("(max-width: 767px)", () => {
           />
           {/* katalog desktop */}
           <a
-            href="#"
+            href="https://infistream.id/wp-content/uploads/2024/07/Report-Pemodelan-Suara.pdf"
             className="hidden md:flex items-center gap-2 mt-2 text-sky-500 hover:underline"
           >
             <span className="font-bold text-lg">&gt;</span> katalog
@@ -206,7 +206,7 @@ mm.add("(max-width: 767px)", () => {
         </div>
         {/* katalog mobile */}
         <a
-          href="#"
+          href="https://infistream.id/wp-content/uploads/2024/07/Report-Pemodelan-Suara.pdf"
           className="flex md:hidden items-center gap-2 mt-3 ml-2 text-sky-700 font-bold underline"
         >
           <span className="font-bold text-lg">&gt;</span> katalog
@@ -227,7 +227,7 @@ mm.add("(max-width: 767px)", () => {
         />
         {/* katalog desktop */}
         <a
-          href="#"
+          href="https://infistream.id/wp-content/uploads/2024/07/1712284803434.pdf"
           className="hidden md:flex items-center gap-2 mt-2 text-sky-500 hover:underline"
         >
           <span className="font-bold text-lg">&gt;</span> katalog
@@ -246,7 +246,7 @@ mm.add("(max-width: 767px)", () => {
       </div>
       {/* katalog mobile */}
       <a
-        href="#"
+        href="https://infistream.id/wp-content/uploads/2024/07/1712284803434.pdf"
         className="flex md:hidden items-center gap-2 mt-3 ml-2 text-sky-700 font-bold underline"
       >
         <span className="font-bold text-lg">&gt;</span> katalog
@@ -266,7 +266,7 @@ mm.add("(max-width: 767px)", () => {
         />
         {/* katalog desktop */}
         <a
-          href="#"
+          href="https://infistream.id/wp-content/uploads/2024/07/REPORT-JET-LES-150ms.pdf"
           className="hidden md:flex items-center gap-2 mt-2 text-sky-500 hover:underline"
         >
           <span className="font-bold text-lg">&gt;</span> katalog
@@ -285,7 +285,7 @@ mm.add("(max-width: 767px)", () => {
       </div>
       {/* katalog mobile */}
       <a
-        href="#"
+        href="https://infistream.id/wp-content/uploads/2024/07/REPORT-JET-LES-150ms.pdf"
         className="flex md:hidden items-center gap-2 mt-3 ml-2 text-sky-700 font-bold underline"
       >
         <span className="font-bold text-lg">&gt;</span> katalog
@@ -305,7 +305,7 @@ mm.add("(max-width: 767px)", () => {
         />
         {/* katalog desktop */}
         <a
-          href="#"
+          href="https://infistream.id/wp-content/uploads/2024/07/Report-Progress-Simulasi-CFD.pdf"
           className="hidden md:flex items-center gap-2 mt-2 text-sky-500 hover:underline"
         >
           <span className="font-bold text-lg">&gt;</span> katalog
@@ -324,7 +324,7 @@ mm.add("(max-width: 767px)", () => {
       </div>
       {/* katalog mobile */}
       <a
-        href="#"
+        href="https://infistream.id/wp-content/uploads/2024/07/Report-Progress-Simulasi-CFD.pdf"
         className="flex md:hidden items-center gap-2 mt-3 ml-2 text-sky-700 font-bold underline"
       >
         <span className="font-bold text-lg">&gt;</span> katalog

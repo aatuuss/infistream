@@ -9,7 +9,7 @@ const KonsultasiCFD = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // === Animasi Judul ===
+      // === Animasi judul ===
       gsap.fromTo(
         ".scroll-animated-h1",
         { opacity: 0, y: -60, scale: 0.8, rotate: -5 },
@@ -28,7 +28,7 @@ const KonsultasiCFD = () => {
         }
       );
 
-      // === Animasi gambar utama ===
+      // === Animasi gambar ===
       gsap.fromTo(
         ".scroll-animated-img",
         { opacity: 0, y: 50 },
@@ -170,7 +170,7 @@ const KonsultasiCFD = () => {
           Jasa simulasi CFD meliputi :
         </p>
         <a
-          href="#"
+          href="https://infistream.id/simulasi-cfd/"
           className="bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-gray-600 px-4 py-2 sm:px-6 sm:py-2 rounded-full shadow-md hover:bg-white transition inline-flex items-center gap-1 sm:gap-2"
         >
           Learn More <span>→</span>
