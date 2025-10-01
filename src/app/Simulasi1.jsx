@@ -58,7 +58,7 @@ const Simulasi1 = () => {
           scrollTrigger: {
             trigger: ".simulasi-title",
             start: "top 90%",
-            toggleActions: "restart none restart none", // 🔥 animasi ulang saat scroll dari atas/bawah
+            toggleActions: "restart none restart none", // 🔥 animasi ulang saat scroll atas/bawah
           },
         }
       );
