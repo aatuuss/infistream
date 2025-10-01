@@ -170,7 +170,6 @@ const KonsultasiCFD = () => {
           Jasa simulasi CFD meliputi :
         </p>
         <a
-          href="https://infistream.id/simulasi-cfd/"
           className="bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-gray-600 px-4 py-2 sm:px-6 sm:py-2 rounded-full shadow-md hover:bg-white transition inline-flex items-center gap-1 sm:gap-2"
         >
           Learn More <span>→</span>
