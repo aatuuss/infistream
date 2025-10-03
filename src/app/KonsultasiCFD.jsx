@@ -9,7 +9,7 @@ const KonsultasiCFD = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // === Animasi judul ===
+      // === Animasi Judul ===
       gsap.fromTo(
         ".scroll-animated-h1",
         { opacity: 0, y: -60, scale: 0.8, rotate: -5 },
@@ -28,13 +28,14 @@ const KonsultasiCFD = () => {
         }
       );
 
-      // === Animasi gambar ===
+      // === Animasi gambar utama ===
       gsap.fromTo(
         ".scroll-animated-img",
         { opacity: 0, y: 50 },
         {
           opacity: 1,
-          y: 0,
+          y: 15,
+          scale: 1,
           duration: 1.5,
           ease: "power3.out",
           scrollTrigger: {
@@ -137,25 +138,31 @@ const KonsultasiCFD = () => {
   }, []);
 
   return (
-    <div
-      ref={componentRef}
-      className="relative w-full min-h-screen p-4 sm:p-8 overflow-hidden bg-gradient-to-b from-white to-[#1E90FF]"
-    >
+  <div
+  ref={componentRef}
+  className="relative w-full h-auto p-0 m-0 
+             overflow-hidden bg-gradient-to-b from-white to-[#1E90FF] to-70% 
+             pb-0 sm:pb-0 -mb-12 sm:-mb-16"
+>
       {/* Container Utama */}
       <div className="grid items-start justify-items-center relative">
         {/* Judul Utama */}
         <h1
-          className="scroll-animated-h1 font-sans 
-                     col-start-1 row-start-1 z-10 text-center 
-                     whitespace-normal sm:whitespace-nowrap
-                     text-2xl sm:text-3xl md:text-6xl lg:text-7xl 
-                     font-extrabold text-transparent bg-clip-text 
-                     bg-[#4facfe] tracking-wide sm:tracking-wider 
-                     drop-shadow-[0_0_20px_rgba(97,167,255,0.8)]"
-        >
-          KONSULTASI CFD
-        </h1>
-
+  className="scroll-animated-h1 font-sans 
+             col-start-1 row-start-1 z-10 text-center 
+             whitespace-normal sm:whitespace-nowrap
+             text-2xl sm:text-3xl md:text-6xl lg:text-7xl 
+             font-extrabold text-[#4facfe] tracking-wide sm:tracking-wider"
+  style={{
+    textShadow: `
+      0 0 10px rgba(97,167,255,0.6), 
+      0 0 18px rgba(97,167,255,0.4), 
+      0 0 28px rgba(97,167,255,0.2)
+    `
+  }}
+>
+  KONSULTASI CFD
+</h1>
         {/* Gambar Utama */}
         <img
           src="/img/konsultasi.png"
@@ -170,6 +177,7 @@ const KonsultasiCFD = () => {
           Jasa simulasi CFD meliputi :
         </p>
         <a
+          href="#"
           className="bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-gray-600 px-4 py-2 sm:px-6 sm:py-2 rounded-full shadow-md hover:bg-white transition inline-flex items-center gap-1 sm:gap-2"
         >
           Learn More <span>→</span>
@@ -185,7 +193,7 @@ const KonsultasiCFD = () => {
                    z-0 mt-16 sm:mt-20 md:mt-32 gap-4 sm:gap-6 md:gap-8 pb-12 sm:pb-16"
       >
         {/* Card kiri */}
-        <div className="card-animation-item card-left w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 drop-shadow-2xl relative">
+        <div className="card-animation-item card-left w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 relative">
           <div className="relative z-10 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-3 sm:p-4 flex items-center justify-between">
             <div className="font-sans text-white text-lg sm:text-xl md:text-xl font-bold text-center drop-shadow-lg">
               <p>INDUSTRI</p>
@@ -197,7 +205,7 @@ const KonsultasiCFD = () => {
         </div>
 
         {/* Card tengah */}
-        <div className="card-animation-item card-center w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 drop-shadow-2xl relative">
+        <div className="card-animation-item card-center w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 relative">
           <div className="relative z-10 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-3 sm:p-4 flex items-center justify-between">
             <div className="font-sans text-white text-lg sm:text-xl md:text-xl font-bold text-center drop-shadow-lg">
               <p>INDUSTRI</p>
@@ -209,7 +217,7 @@ const KonsultasiCFD = () => {
         </div>
 
         {/* Card kanan */}
-        <div className="card-animation-item card-right w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 drop-shadow-2xl relative">
+        <div className="card-animation-item card-right w-64 sm:w-72 md:w-72 h-36 sm:h-40 md:h-40 relative">
           <div className="relative z-10 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl p-3 sm:p-4 flex items-center justify-between">
             <div className="font-sans text-white text-lg sm:text-xl md:text-xl font-bold text-center drop-shadow-lg">
               <p>INDUSTRI</p>
