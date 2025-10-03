@@ -11,3 +11,12 @@
   -ms-overflow-style: none;  /* for IE and Edge */
   scrollbar-width: none;     /* for Firefox */
 }
+
+/* Hide scrollbar but still scrollable */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}

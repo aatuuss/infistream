@@ -115,9 +115,11 @@ const Layanan = () => {
 
   return (
     <div
-      ref={containerRef}
-      className="relative w-full p-8 mb-30 bg-[#1E90FF] flex items-start justify-center font-sans"
-    >
+  ref={containerRef}
+  className="relative w-full p-8 pt-20 md:pt-24 bg-[#1E90FF] flex items-start justify-center font-sans"
+>
+
+
       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-16 max-w-5xl w-full mx-auto">
         {/* Bagian Teks */}
         <div
@@ -127,7 +129,7 @@ const Layanan = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-white font-sans">
             Layanan Konsultasi Kami
           </h2>
-          <p className="text-gray-100 leading-relaxed text-base md:text-lg font-sans">
+          <p className="text-white leading-relaxed text-base md:text-lg font-sans">
             Kami menyediakan layanan konsultasi fleksibel,
             baik offline maupun online, serta siap
             melakukan kunjungan lapangan sesuai
